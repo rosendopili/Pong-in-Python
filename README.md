@@ -1,4 +1,4 @@
-## Pong-in-Python
+## Pong in Python
 
 Technologies used: 
 * Python 3 
