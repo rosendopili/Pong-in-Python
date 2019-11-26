@@ -104,12 +104,12 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
-        os.system("afplay pong.wav")
+        os.system("afplay pong.wav&")
 
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
-        os.system("afplay pong.wav")
+        os.system("afplay pong.wav&")
     # making the ball interact with the top and & bottom borders
 
     if ball.xcor() > 390:
@@ -127,15 +127,15 @@ while True:
         pen.write("Player A: {}      Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
 
     # Paddle and ball collisions
-    if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < pad_b.ycor() + 40 and ball.ycor() > pad_b.ycor() -40):
+    if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < pad_b.ycor() + 45 and ball.ycor() > pad_b.ycor() -45):
         ball.setx(340)
         ball.dx *= -1
-        os.system("afplay pong.wav")
+        os.system("afplay pong.wav&")
 
-    if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < pad_a.ycor() + 40 and ball.ycor() > pad_a.ycor() -40):
+    if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < pad_a.ycor() + 45 and ball.ycor() > pad_a.ycor() -45):
         ball.setx(-340)
         ball.dx *= -1
-        os.system("afplay pong.wav")
+        os.system("afplay pong.wav&")
 
 
 
